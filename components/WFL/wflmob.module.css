@@ -1,0 +1,61 @@
+.mainMob {
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+    margin: 25px 0;
+}
+
+.spotWrapper {
+    width: 95%;
+    height: 95%;
+    /* background-color: grey; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin: 0 auto;
+}
+
+.spotItem {
+    width: 45%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.footwear,
+.living,
+.footwear img,
+.living img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.summerSaleItem,
+.launchesItem {
+    display: flex;
+}
+.spotButtonWrapper {
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spotButtonWrapper button {
+    width: auto;
+    height: 50px;
+    padding: 0 35px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    margin-top: 25px;
+
+}
+@media screen and (min-width: 426px) {
+    .mainMob,
+    .spotButtonWrapper {
+        display: none;
+    }
+}

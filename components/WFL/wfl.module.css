@@ -1,0 +1,59 @@
+.main {
+    height: 100%;
+    width: 100vw;
+    /* background-color: pink; */
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.spotWrapper {
+    width: 95%;
+    height: 95%;
+    /* background-color: grey; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+    .spotWrapper {
+        margin-top: 80px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .spotWrapper {
+        margin-top: 30px;
+    }
+}
+.spotItem {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* background-color: white; */
+    
+}
+.spotItem a {
+    display: flex;
+    justify-content: center;
+}
+.womens,
+.footwear,
+.living,
+.womens img,
+.footwear img,
+.living img{
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+.summerSaleItem,
+.launchesItem {
+    display: flex;
+}
+@media screen and (max-width: 425px) {
+    .main {
+        display: none;
+    }
+}

@@ -1,0 +1,25 @@
+@media screen and (min-width: 768px) {
+    .klarnaWrapper {
+        margin-top: 50px;
+    }
+}
+.klarnaWrapper {
+    width: 100%;
+    height: 40px;
+    background-color: #272727;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.klarnaWrapper a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
