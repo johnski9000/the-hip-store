@@ -1,14 +1,10 @@
 .main {
     height: 100%;
     width: 100vw;
-    /* background-color: pink; */
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center; */
+    margin: 75px 0;
 }
-
 .spotWrapper {
-    width: 95%;
+    width: 75%;
     height: 95%;
     /* background-color: grey; */
     display: flex;
@@ -16,18 +12,8 @@
     align-items: center;
     margin: 0 auto;
 }
-@media screen and (min-width: 768px) {
-    .spotWrapper {
-        margin-top: 80px;
-    }
-}
-@media screen and (max-width: 768px) {
-    .spotWrapper {
-        margin-top: 30px;
-    }
-}
 .spotItem {
-    width: 30%;
+    width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -37,23 +23,31 @@
 .spotItem a {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-.womens,
-.footwear,
-.living,
-.womens img,
 .footwear img,
 .living img{
-    max-width: 90%;
+    max-width: 80%;
     height: auto;
     margin: 0 auto;
 }
-.summerSaleItem,
-.launchesItem {
-    display: flex;
-}
+
 @media screen and (max-width: 768px) {
-    .main {
-        display: none;
+    .spotWrapper {
+        flex-flow: column;
     }
+    .spotWrapper {
+        width: 100%;
+    }
+    .spotItem {
+        width: 90%;
+        margin: 25px 0;
+    }
+    .footwear img,
+.living img{
+    max-width: 85%;
+}
+.main {
+    margin: 0px;
+}
 }

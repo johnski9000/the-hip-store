@@ -1,0 +1,88 @@
+.blogWrapper h3 {
+    color: grey;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: Open Sans,sans-serif;
+    letter-spacing: 2px;
+    font-style: normal;
+  }
+  
+  .blogItems {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  
+  }
+  
+  .blogLeft {
+    width: 45%;
+    height: 700px;
+    display: flex;
+    flex-flow: column;
+  
+  }
+  .blogLeft h2 {
+    margin-bottom: 30px;
+    font-size: 22px;
+      line-height: 1.9;
+      text-align: unset;
+      font-family: 'Quicksand', sans-serif;
+      color: grey;
+  }
+  .blogLeft p {
+    margin-bottom: 80px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+  }
+  .blogLeft a {
+    font-size: 14px;
+  }
+  
+  .blogRight {
+    width: 45%;
+    height: 700px;
+    display: flex;
+    flex-flow: column;
+  
+  }
+  .blogRight h2 {
+    margin-bottom: 30px;
+    font-size: 22px;
+      line-height: 1.9;
+      text-align: unset;
+      font-family: 'Quicksand', sans-serif;
+      color: grey;
+  }
+  .blogRight p {
+    margin-bottom: 80px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+  }
+  .blogRight a {
+    font-size: 14px;
+  }
+  .blog1Wrapper {
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 45%;
+    background: url("./blog1.png") no-repeat center;
+    background-size: contain;
+  }
+  
+  .blog2Wrapper {
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 45%;
+    background: url("./blog2.png") no-repeat center;
+    background-size: contain;
+  }
+  
+  .buttonWrapper {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

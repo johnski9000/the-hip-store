@@ -3,6 +3,11 @@
         margin-top: 50px;
     }
 }
+@media screen and (max-width: 768px) {
+    .klarnaWrapper {
+        display: none !important;
+    }
+}
 .klarnaWrapper {
     width: 100%;
     height: 40px;
@@ -17,7 +22,7 @@
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
     font-size: 11px;
-    width: 25%;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;

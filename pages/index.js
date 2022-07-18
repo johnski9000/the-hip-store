@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Blog from '../components/Blog/Blog'
+import FL from '../components/FL/FL'
 import Header from '../components/Header/Header'
 import HeaderMobile from '../components/Header/HeaderMobile'
 import Klarna from '../components/Klarna/Klarna'
@@ -22,6 +24,8 @@ export default function Home() {
       <Spot/>
       <WFL/>
       <WFLMob/>
+      <FL/>
+      <Blog/>
     </div>
     
   )

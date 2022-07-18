@@ -48,7 +48,7 @@
 
 /** Mobile Section **/
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
     .main {
         flex-flow: column;
     }
@@ -60,6 +60,6 @@
         margin-bottom: 25px;
     }
 }
-@media screen and (min-width: 426px) {
+@media screen and (min-width: 768px) {
     .spotItemMob {display: none;}
 }
