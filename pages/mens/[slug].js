@@ -1,9 +1,13 @@
-export const getStaticPaths = () => {
-    
-}
+import PlaceHolder from "../../components/Header/HeaderPlaceHolder";
+
 
 function MensSlug () {
     return (
-        <h1>Mens items</h1>
+        <div>
+        <PlaceHolder/>
+        <h1>You've made it!</h1>
+        </div>
     )
 }
+
+export default MensSlug;

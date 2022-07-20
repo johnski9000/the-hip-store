@@ -23,6 +23,7 @@ const Mens = ({ items }) => {
       <div  className={styles.mensWrapper}> 
       {products.map((product) => (
         <div className={styles.productCard} key={product.id}>
+        
           <img src={product.thumbnail} alt="" />
           <div className={styles.productContent}>
           <h4>{product.title}</h4>
@@ -30,6 +31,9 @@ const Mens = ({ items }) => {
           <p>Rating: {product.rating}/5</p>
           <p>£{product.price}</p>
           </div>
+          <a href={"http://localhost:3000/mens/" + product.id}>
+          <button>View product</button>
+          </a>
           <button>Add to cart</button>
         </div>
       ))}
