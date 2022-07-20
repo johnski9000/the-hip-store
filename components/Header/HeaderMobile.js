@@ -9,6 +9,7 @@ function HeaderMobile (props) {
     return (
         <div className={styles.wrapperMob}>
             <div className={styles.logo}>
+                <a href="/">
                 <Image 
                 src="/logo.png"
                 alt="logo"
@@ -16,6 +17,7 @@ function HeaderMobile (props) {
                 width={80}
                 height={18}
                 />
+                </a>
             </div>
             <div className={styles.iconsMob}>
                 

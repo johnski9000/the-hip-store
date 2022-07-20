@@ -1,0 +1,33 @@
+.mainWrapper{
+    width: 100vw;
+}
+
+.mensWrapper {
+    width: 90vw;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+}
+
+.productCard {
+    width: 31%;
+    height: 500px;
+    background-color: rgb(231, 231, 228);
+    display: flex;
+    flex-flow:column;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-top: 30px;
+}
+.productCard img {
+    max-width: 50%;
+    height: 40%;
+}
+
+.productContent {
+    width: 85%;
+    height: 40%;
+    margin-top: 25px;
+}

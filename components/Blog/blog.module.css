@@ -26,10 +26,11 @@
   .blogLeft h2 {
     margin-bottom: 30px;
     font-size: 22px;
-      line-height: 1.9;
+      line-height: 1.5;
       text-align: unset;
       font-family: 'Quicksand', sans-serif;
       color: grey;
+      
   }
   .blogLeft p {
     margin-bottom: 80px;
@@ -50,7 +51,7 @@
   .blogRight h2 {
     margin-bottom: 30px;
     font-size: 22px;
-      line-height: 1.9;
+      line-height: 1.5;
       text-align: unset;
       font-family: 'Quicksand', sans-serif;
       color: grey;
@@ -86,3 +87,12 @@
     align-items: center;
     justify-content: center;
   }
+  .button {
+    width: auto;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    margin-top: 25px;
+    width: 200px;
+}

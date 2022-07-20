@@ -6,6 +6,7 @@ function Header () {
     return (
         <div className={styles.wrapperPC}>
             <div className={styles.logo}>
+                <a href="/">
                 <Image 
                 src="/logo.png"
                 alt="logo"
@@ -13,6 +14,7 @@ function Header () {
                 width={80}
                 height={18}
                 />
+                </a>
             </div>
             <NavLinks>
                 

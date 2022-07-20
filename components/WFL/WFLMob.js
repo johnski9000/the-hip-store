@@ -16,7 +16,7 @@ function WFLMob(props) {
         </div>
       </div>
       <div className={styles.spotButtonWrapper}>
-        <button>Show All Latest Arrivals</button>
+        <button className={styles.button}>Show All Latest Arrivals</button>
       </div>
     </main>
   );

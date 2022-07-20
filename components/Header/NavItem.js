@@ -6,7 +6,7 @@ function NavItem (props) {
     return (
         <li onMouseEnter={() => setOpen(true)}
         onMouseLeave={() => setOpen(false)}>
-            <a href="#">
+            <a href={props.path}>
                 {props.children}
             </a>
             { open && 
@@ -18,7 +18,7 @@ function NavItem (props) {
 function DropDownMenu() {
     function DropDownItem(props) {
         return (
-            <a href="#" className={styles.menuItem}>
+            <a href={props} className={styles.menuItem}>
                 
             </a>
         )

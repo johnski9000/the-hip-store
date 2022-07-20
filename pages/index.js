@@ -2,8 +2,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Blog from '../components/Blog/Blog'
 import FL from '../components/FL/FL'
-import Header from '../components/Header/Header'
-import HeaderMobile from '../components/Header/HeaderMobile'
 import Klarna from '../components/Klarna/Klarna'
 import Spot from '../components/Spot-Section/Spot'
 import WFL from '../components/WFL/WFL'
@@ -18,8 +16,6 @@ export default function Home() {
           The Hip Store
         </title>
       </Head>
-      <Header/>
-      <HeaderMobile/>
       <Klarna/>
       <Spot/>
       <WFL/>

@@ -34,7 +34,7 @@ function Blog() {
             <a href="asda">Read More</a>
           </div>
         </div>
-        <div className={styles.buttonWrapper}><button>VISIT BLOG</button></div>
+        <div className={styles.buttonWrapper}><button className={styles.button}>VISIT BLOG</button></div>
         
       </div>
     );

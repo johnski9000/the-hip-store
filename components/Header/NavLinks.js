@@ -9,13 +9,13 @@ function NavLinks () {
     return (
         <ul className={styles.navLinks}>
               
-            <NavItem>Brands</NavItem>
-            <NavItem>Mens</NavItem>
-            <NavItem>Womens</NavItem>
-            <NavItem>Living</NavItem>
-            <NavItem>Sale</NavItem>
-            <NavItem>Launches</NavItem>
-            <NavItem>Blog</NavItem>
+            <NavItem path="/brands">Brands</NavItem>
+            <NavItem path="/mens">Mens</NavItem>
+            <NavItem path="/womens">Womens</NavItem>
+            <NavItem path="/living">Living</NavItem>
+            <NavItem path="/sale">Sale</NavItem>
+            <NavItem path="/launches">Launches</NavItem>
+            <NavItem path="/brands">Blog</NavItem>
         </ul>
     )
 }

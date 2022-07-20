@@ -12,11 +12,13 @@
 .wrapperMob {
     display: flex;
     align-items: center;
+    position: fixed;
     justify-content: space-between;
     height: 50px;
+    width: 100%;
     border-bottom: 1px grey solid;
     background-color: white;
-    padding: 0 25px;
+    padding-left: 25px;
     z-index: 10;
     
 }
@@ -81,6 +83,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-right: 25px;
 }
 
 .navButton {
@@ -126,4 +129,9 @@
     top: 50px;
     right: 0;
     background-color: black;
+}
+
+.placeHolder {
+    position: relative;
+    height: 50px;
 }
