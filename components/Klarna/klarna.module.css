@@ -16,6 +16,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    z-index: 111;
 }
 .klarnaWrapper a {
     color: white;
@@ -27,4 +29,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.klarnaWrapper a:hover {
+    color: white;
 }

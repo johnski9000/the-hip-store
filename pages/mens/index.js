@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PlaceHolder from "../../components/Header/HeaderPlaceHolder";
 import styles from "./mens.module.css";
 
@@ -17,26 +18,24 @@ const Mens = ({ items }) => {
   }
   return (
     <div className={styles.mainWrapper}>
-      <PlaceHolder />
-      
       <h1 onClick={() => getData()}>Mens</h1>
-      <div  className={styles.mensWrapper}> 
-      {products.map((product) => (
-        <div className={styles.productCard} key={product.id}>
-        
-          <img src={product.thumbnail} alt="" />
-          <div className={styles.productContent}>
-          <h4>{product.title}</h4>
-          <h5>{product.description}</h5>
-          <p>Rating: {product.rating}/5</p>
-          <p>£{product.price}</p>
+      <div className={styles.mensWrapper}>
+        {products.slice(0, 12).map((product) => (
+          <div className={styles.productCard} key={product.id} class="card">
+            <Link href={"/mens/" + product.id}>
+            <a>
+            <img src={product.thumbnail} alt="" class="card-img-top" />
+            <div className={styles.productContent} class="card-body">
+              <h4 class="card-text">{product.title}</h4>
+              <p class="card-text">{product.description}</p>
+              <p class="card-text">Rating: {product.rating}/5</p>
+              <p class="card-text">£{product.price}</p>
+            </div>
+            </a>
+            </Link>
+            <button type="button" class="btn btn-outline-secondary">Add to basket </button>
           </div>
-          <a href={"http://localhost:3000/mens/" + product.id}>
-          <button>View product</button>
-          </a>
-          <button>Add to cart</button>
-        </div>
-      ))}
+        ))}
       </div>
     </div>
   );

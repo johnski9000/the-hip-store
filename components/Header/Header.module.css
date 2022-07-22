@@ -44,7 +44,7 @@
     display: flex;
     font-family: 'Open Sans', sans-serif;
     justify-content: center;
-    align-items: center;
+
     list-style: none;
     padding: 0;
 
@@ -133,5 +133,6 @@
 
 .placeHolder {
     position: relative;
-    height: 50px;
+    height: 100px;
+    /* background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%); */
 }
