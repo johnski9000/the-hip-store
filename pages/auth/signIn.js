@@ -7,12 +7,12 @@ export default function SignIn({providers}) {
     <>
       {Object.values(providers).map((provider) => (
         <div key={provider.name}>
-          <button onClick={() => SignIntoProvider(provider.id)}>
+          <button onClick={() => SignIntoProvider(provider.id, {callbackUrl: "/"})}>
             Sign in with {provider.name}
           </button>
         </div>
       ))}
-      <button onClick={() => signOut()}>Sign Out</button>
+      <button onClick={() => signOut({callbackUrl: "/"})}>Sign Out</button>
     </>
   )
 }

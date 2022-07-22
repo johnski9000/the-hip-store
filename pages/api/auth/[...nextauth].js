@@ -23,12 +23,13 @@ export default NextAuth({
 
 // },
 callbacks: {
-    async session({ session, token, user }) {
-      // session.user.username = sesssion.user.name.split("").join("").toLocaleLowerCase();
-      // Send properties to the client, like an access_token from a provider.
-      session.user.uid = token.sub
-      return session
-    }
-  },
+  async redirect({ url, baseUrl }) {
+    // Allows relative callback URLs
+    if (url.startsWith("/")) return `${baseUrl}${url}`
+    // Allows callback URLs on the same origin
+    else if (new URL(url).origin === baseUrl) return url
+    return baseUrl
+  }
+}
 })
 

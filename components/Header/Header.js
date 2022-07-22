@@ -28,11 +28,11 @@ function Header () {
                 <img src="/search-interface-symbol.png" className={styles.navButton} alt="nav"/>
                 <Link href="/auth/signIn" ><a><img src="/user-profile.png" className={styles.navButton} alt="nav"/></a></Link>
                 <img src="/shopping-basket.png" className={styles.navButton} alt="nav"/>
-                {session &&
+                {/* {session &&
                 (
                     <img alt="profile photo" src={session.user.image}/>
                 )
-                }
+                } */}
             </div>
         </div>
     )
