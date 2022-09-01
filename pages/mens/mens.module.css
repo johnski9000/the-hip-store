@@ -12,10 +12,13 @@
     margin: 0 auto;
 
 }
+.card-img-top {
+    height: 50%;
+}
 
 .productCard {
     width: 31%;
-    height: 550px;
+    height: auto;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     display: flex;
@@ -43,6 +46,9 @@
     height: 30%;
     margin: 0 auto;
 }
+.productCard a {
+    height: 400px;
+}
 .productContent {
     display: flex;
     flex-flow: column;
@@ -59,3 +65,4 @@
     height: 40%;
     margin-top: 25px;
 } */
+
