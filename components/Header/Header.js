@@ -6,7 +6,6 @@ import NavLinks from "./NavLinks";
 
 function Header () {
     const {data : session} = useSession()
-    console.log(session)
     return (
         <div className={styles.wrapperPC}>
             <div className={styles.logo}>
@@ -26,8 +25,18 @@ function Header () {
             <div className={styles.icons}>
                 
                 <img src="/search-interface-symbol.png" className={styles.navButton} alt="nav"/>
-                <Link href="/auth/signIn" ><a><img src="/user-profile.png" className={styles.navButton} alt="nav"/></a></Link>
-                <img src="/shopping-basket.png" className={styles.navButton} alt="nav"/>
+                {
+                    session &&
+                    <Link href="/account/user" ><a className={styles.navButton}><img src="/user-profile.png"  alt="nav"/></a></Link>
+
+                }
+                {
+                    !session &&
+                    <Link href="/api/auth/signin" ><a className={styles.navButton}><img src="/user-profile.png" alt="nav"/></a></Link>
+
+                }
+                {/* <Link href="/api/auth/signin" ><a><img src="/user-profile.png" className={styles.navButton} alt="nav"/></a></Link> */}
+                <Link href="/cart" ><a className={styles.navButton}><img src="/shopping-basket.png"  alt="nav"/></a></Link>
                 {/* {session &&
                 (
                     <img alt="profile photo" src={session.user.image}/>
