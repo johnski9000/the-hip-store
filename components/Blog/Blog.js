@@ -2,10 +2,11 @@ import styles from "./blog.module.css"
 
 function Blog() {
     return (
-      <div className={styles.blogWrapper}>
+      <div className={styles.blogWrapper} >
         <h3>BLOG</h3>
         <div className={styles.blogItems}>
-          <div className={styles.blogLeft}>
+          <div className={styles.blogLeft} >
+          {/* data-aos="zoom-in-bottom" data-aos-duration="1000" */}
             <a className={styles.blog1Wrapper}/>
             <h2>New Balance - Created For Everyone - Exclusively at HIP</h2>
             <p>
@@ -19,7 +20,8 @@ function Blog() {
             <a href="asda">Read More</a>
           </div>
   
-          <div className={styles.blogRight}>
+          <div className={styles.blogRight} >
+          {/* data-aos="zoom-in-left" data-aos-duration="1000" */}
             <a className={styles.blog2Wrapper}/>
             <h2>New To HIP: SOAR Running</h2>
             <p>

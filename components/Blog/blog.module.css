@@ -96,3 +96,17 @@
     margin-top: 25px;
     width: 200px;
 }
+@media screen and (max-width: 768px) {
+  .blogItems {
+    flex-flow: column;
+    justify-items: center;
+    align-items: center;
+  }
+  .blogRight,
+  .blogLeft {
+    width: 90%;
+    text-align: center;
+    height: auto;
+    margin-bottom: 50px;
+  }
+}

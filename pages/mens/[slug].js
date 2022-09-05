@@ -1,8 +1,8 @@
+import React, { useContext } from "react";
 import { useRouter } from "next/router";
-import PlaceHolder from "../../components/Header/HeaderPlaceHolder";
-import Link from "next/link";
 import data from "../../utils/data";
-import { useContext } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import { Store } from "../../utils/store";
 
 
@@ -11,7 +11,7 @@ function MensSlug() {
   const {state, dispatch} = useContext(Store)
   const { query } = useRouter();
   const { slug } = query;
-  const product = data.products.find((x) => x.slug === slug)
+  const product = data.products.find((x) => x.slug === slug); 
 
   const addToCartHandler = () => {
     const existItem = state.cart.cartItems.find(x => x.slug === product.slug);
@@ -19,27 +19,27 @@ function MensSlug() {
     dispatch({type:"CART_ADD_ITEM", payload:{...product, quantity}})
   }
 
-  // if (!product) {
-  //   return (
-  //       <>
-  //         <div>product not found</div>
-  //       </>
-  //   )
-  // }
+  if (!product) {
+    return (
+        <>
+          <div>product not found</div>
+        </>
+    )
+  }
   return (
-    <>
+    <main className="mx-5 mb-10">
       <div className="py-3 ">
-        <Link href="/" >back to products</Link>
+        <Link href="/mens/" >back to products</Link>
       </div>
       <div className="grid md:grid-cols-4 md:gap-3">
         <div className="md:col-span-2">
-          {/* <Image
+          <Image
             src={product.image}
             alt={product.description}
             width={640}
             height={640}
             layout="responsive"
-          ></Image> */}
+          ></Image>
         </div>
         <div className="md:col-span-1">
           <ul>
@@ -66,7 +66,7 @@ function MensSlug() {
           </div>
         </div>
       </div>
-      </>
+      </main>
     );
 }
 
