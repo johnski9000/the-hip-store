@@ -80,7 +80,7 @@ function LoginScreen() {
           <button className="primary-button">Login</button>
         </div>
         <div className="mb-4">
-          Don&apos;t have an account?&ngsp;
+          Don&apos;t have an account?<br/>
           <Link href="register">Sign up now!</Link>
         </div>
       </form>
