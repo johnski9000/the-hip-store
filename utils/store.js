@@ -11,7 +11,6 @@ const initialState = {
 function reducer(state, action) {
   switch (action.type) {
     case "CART_ADD_ITEM": {
-      console.log(action)
       const newItem = action.payload;
       const existItem = state.cart.cartItems.find(
         (item) => item.slug === newItem.slug
@@ -30,7 +29,16 @@ function reducer(state, action) {
       )
       Cookies.set('cart', JSON.stringify({...state.cart, cartItems}))
       return {...state, cart: {...state.cart, cartItems}}
-    }
+    };
+    case 'CART_RESET':
+      return {
+        ...state,
+        cart: {
+          cartItems: [],
+          shippingAddress: { location: {} },
+          paymentMethod: '',
+        },
+      };  
     default: 
     return state;
   }

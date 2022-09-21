@@ -28,6 +28,12 @@ textarea {
 * {
   box-sizing: border-box;
 }
+.dropdown-link {
+  @apply flex p-2 hover:bg-gray-200;
+}
+.image-hover {
+  @apply hover:bg-gray-200;
+}
 /*
 a {
   color: inherit;

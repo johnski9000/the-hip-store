@@ -12,23 +12,23 @@ overflow: hidden;
     align-items: center;
     margin: 0 auto;
 }
-@media screen and (min-width: 768px) {
-    .spotWrapper {
-        margin-top: 30px;
-    }
-}
-@media screen and (max-width: 768px) {
-    .spotWrapper {
-        margin-top: 30px;
-    }
-}
+
+
 .spotItem {
     width: 40%;
     height: 100%;
-    
     /* background-color: white; */
-    
 }
+
+.spotItem img:hover {
+        -o-transition:.5s;
+        -ms-transition:.5s;
+        -moz-transition:.5s;
+        -webkit-transition:.5s;
+        transition:.5s;
+        box-shadow: 10px 10px 5px #888888;
+}
+
 .summerSaleItem,
 .summerSaleItem img,
 .launchesItem,
@@ -46,14 +46,52 @@ overflow: hidden;
 
 @media screen and (max-width: 768px) {
     
-    .spotWrapper {
+    .spotWrapper,
+    .spotWrapper2,
+    .spotWrapper3 {
         flex-flow: column;
     }
     .spotItem {
-        width: 99%;
-        margin-bottom: 25px;
+        width: 85%;
+        /* margin-bottom: 25px; */
+        margin: 1.5rem auto;
     }
+    .spotWrapper .spotItem {
+        margin: 0 auto !important;
+        margin-bottom: 2rem !important;
+    }
+}
+@media screen and (max-width: 768px) {
+    .spotItemMob {display: none;}
 }
 @media screen and (min-width: 768px) {
     .spotItemMob {display: none;}
+    .spotWrapper2 {
+        margin-top: 25px !important;
+        width: 95%;
+        height: 95%;
+        /* background-color: grey; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .spotWrapper2 div {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .spotWrapper3 {
+        margin-top: 30px !important;
+        width: 95%;
+        height: 95%;
+        /* background-color: grey; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .spotWrapper3 div {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
