@@ -24,12 +24,8 @@ export default function Home() {
       </Head>
       {/* <Klarna/> */}
       <div className={styles.spotWrapper}>
-<<<<<<< HEAD
-        <div className={styles.spotItem} data-aos="flip-left" data-aos-duration="1000">
-=======
       {/* data-aos="flip-left" data-aos-duration="1000" */}
         <div className={styles.spotItem}>
->>>>>>> 2693a816556ca088ab3a239e7cab3172430ac745
           <a href="/mens" className={styles.summerSaleItem} >
             <img src="/sale-image.png"/>
             </a>

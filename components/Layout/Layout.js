@@ -102,7 +102,7 @@ export default function Layout({ children }) {
           </nav>
         </header>
         <Klarna />
-        <main className="md:mt-28 mt-20">{children}</main>
+        <main className="md:mt-28 mt-20 ">{children}</main>
         <footer className="flex h-10 justify-center items-center shadow-inner">
           <p>Copyright © 2022 The Hip Store</p>
         </footer>

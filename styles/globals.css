@@ -34,6 +34,9 @@ textarea {
 .image-hover {
   @apply hover:bg-gray-200;
 }
+.shipping {
+  min-height: 78vh;
+}
 /*
 a {
   color: inherit;
