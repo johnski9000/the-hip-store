@@ -37,6 +37,9 @@ textarea {
 .shipping {
   min-height: 78vh;
 }
+.mainElement {
+  min-height: 80vh;
+}
 /*
 a {
   color: inherit;

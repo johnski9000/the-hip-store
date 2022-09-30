@@ -10,7 +10,7 @@
     
 }
 .klarnaWrapper {
-    width: 100%;
+    width: 200vw;
     height: 40px;
     background-color: #272727;
     color: white;
@@ -19,13 +19,27 @@
     align-items: center;
     position: fixed;
     z-index: 1;
+    animation-name: uspAnimation;
+        animation-duration: 23s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
 }
+
+@keyframes uspAnimation {
+    0% {
+        margin-left: 0%;
+    }
+    100% {
+        margin-left: -90%;
+    }
+}
+
 .klarnaWrapper a {
     color: white;
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
     font-size: 11px;
-    width: 100%;
+    width: 33vw;
     height: 100%;
     display: flex;
     justify-content: center;

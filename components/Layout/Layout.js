@@ -15,11 +15,12 @@ export default function Layout({ children }) {
   const { status, data: session } = useSession();
   const { state , dispatch} = useContext(Store);
   const { cart } = state;
+  console.log(cart)
   const [cartItemsCount, setCartItemsCount] = useState(0);
   useEffect(() => {
     setCartItemsCount(cart.cartItems.reduce((a, c) => a + c.quantity, 0));
   }, [cart.cartItems]);
-
+  
   const logoutClickHandler = () => {
     Cookies.remove('cart');
     dispatch({ type: 'CART_RESET' });
@@ -102,7 +103,7 @@ export default function Layout({ children }) {
           </nav>
         </header>
         <Klarna />
-        <main className="md:mt-28 mt-20 ">{children}</main>
+        <main className="md:mt-28 mt-20 mainElement">{children}</main>
         <footer className="flex h-10 justify-center items-center shadow-inner">
           <p>Copyright © 2022 The Hip Store</p>
         </footer>
