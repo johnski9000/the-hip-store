@@ -4,16 +4,18 @@ import data from "../../utils/data";
 import Link from "next/link";
 import Image from "next/image";
 import { Store } from "../../utils/store";
+import db from "../../utils/db";
+import Product from "../../models/Product";
 
 
 
-function MensSlug() {
+function MensSlug(props) {
   const {state, dispatch} = useContext(Store)
-  const { query } = useRouter();
-  const { slug } = query;
-  const product = data.products.find((x) => x.slug === slug); 
+  const {product} = props;
+
 
   const addToCartHandler = () => {
+    const {data} = await axios.get(`/api/products/${product._id}`)
     const existItem = state.cart.cartItems.find(x => x.slug === product.slug);
     const quantity = existItem ?  existItem.quantity += 1 : 1;
     dispatch({type:"CART_ADD_ITEM", payload:{...product, quantity}})
@@ -22,7 +24,7 @@ function MensSlug() {
   if (!product) {
     return (
         <>
-          <div>product not found</div>
+          <div className="ml-8 italic">Product not found</div>
         </>
     )
   }
@@ -69,5 +71,22 @@ function MensSlug() {
       </main>
     );
 }
+
+export async function getServerSideProps(context) {
+  // Fetch data from external API
+  const {params} = context;
+  const {slug} = params
+  await db.connect();
+  const product = await Product.findOne({slug}).lean()
+  await db.disconnect();
+
+  // Pass data to the page via props
+  return {
+    props:{
+      product: product ? db.convertDocToObj(product) : null,
+    }
+  }
+}
+
 
 export default MensSlug;
