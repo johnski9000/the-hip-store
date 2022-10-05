@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 import Cookies from 'js-cookie';
 import CheckoutWizard from '../components/CheckoutWizard/CheckoutWizard';
 import { Store } from '../utils/store';
+import PlaceOrderScreen from './placeorder';
 
 
 export default function PaymentScreen() {
@@ -73,3 +74,5 @@ export default function PaymentScreen() {
     </div>
   );
 }
+
+PaymentScreen.auth = true

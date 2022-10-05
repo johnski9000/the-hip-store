@@ -1,24 +1,29 @@
 import React, { useContext } from "react";
+import axios from 'axios';
 import { useRouter } from "next/router";
-import data from "../../utils/data";
 import Link from "next/link";
 import Image from "next/image";
 import { Store } from "../../utils/store";
 import db from "../../utils/db";
 import Product from "../../models/Product";
-
+import { toast } from 'react-toastify';
 
 
 function MensSlug(props) {
   const {state, dispatch} = useContext(Store)
   const {product} = props;
+  const router = useRouter();
 
+  const  addToCartHandler = async() => {
+    const existItem = state.cart.cartItems.find((x) => x.slug === product.slug);
+    const quantity = existItem ? existItem.quantity + 1 : 1;
+    const { data } = await axios.get(`/api/products/${product._id}`);
 
-  const addToCartHandler = () => {
-    const {data} = await axios.get(`/api/products/${product._id}`)
-    const existItem = state.cart.cartItems.find(x => x.slug === product.slug);
-    const quantity = existItem ?  existItem.quantity += 1 : 1;
+    if (data.countInStock < quantity) {
+      return toast.error('Sorry. Product is out of stock');
+    }
     dispatch({type:"CART_ADD_ITEM", payload:{...product, quantity}})
+    toast.success('Product updated in the cart');
   }
 
   if (!product) {

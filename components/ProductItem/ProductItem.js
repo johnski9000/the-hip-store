@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-function ProductItem({ product }) {
+function ProductItem({ product, addToCartHandler }) {
 
     
   return (
@@ -22,7 +22,7 @@ function ProductItem({ product }) {
       </Link>
       <p className="mb-2">{product.brand}</p>
       <p>${product.price}</p>
-      <button className="primary-button" type="button">
+      <button className="primary-button" type="button" onClick={() => addToCartHandler(product)}>
         Add to cart
       </button>
     </div>

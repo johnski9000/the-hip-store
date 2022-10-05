@@ -14,8 +14,9 @@ import DropdownLink from "../Dropdown/DropdownLink";
 export default function Layout({ children }) {
   const { status, data: session } = useSession();
   const { state , dispatch} = useContext(Store);
+  console.log(state)
+  console.log(session)
   const { cart } = state;
-  console.log(cart)
   const [cartItemsCount, setCartItemsCount] = useState(0);
   useEffect(() => {
     setCartItemsCount(cart.cartItems.reduce((a, c) => a + c.quantity, 0));

@@ -10,7 +10,6 @@ import "aos/dist/aos.css";
 export default function Home() {
 
   const {data : session} = useSession();
-  console.log(session)
   useEffect(() => {
     AOS.init();
     AOS.refresh();
