@@ -1,3 +1,4 @@
+import { PayPalButtons, usePayPalScriptReducer } from '@paypal/react-paypal-js';
 import React from 'react'
 import {useRouter} from 'next/router'
 import axios from 'axios';
@@ -20,6 +21,8 @@ function reducer(state, action) {
   }
   function OrderScreen() {
     // order/:id
+    const [{isPending}, paypalDispatch] = usePaypalScriptReducer();
+
     const { query } = useRouter();
     const orderId = query.id;
   
@@ -40,8 +43,21 @@ function reducer(state, action) {
       };
       if (!order._id || (order._id && order._id !== orderId)) {
         fetchOrder();
+      } else {
+        const loadPaypalScript = async () => {
+          const {data:clientId} = await axios.get('/api/keys/paypal');
+          paypalDispatch({
+            type: "resetOptions",
+            value: {
+              "client-id" : clientId,
+              currency: "USD",
+            }
+          })
+          paypalDispatch({type: "setLoadingStatus", value:"pending"})
+        }
+        loadPaypalScript()
       }
-    }, [order, orderId]);
+    }, [order, orderId], paypalDispatch);
     const {
       shippingAddress,
       paymentMethod,
@@ -157,6 +173,16 @@ function reducer(state, action) {
                       <div>${totalPrice}</div>
                     </div>
                   </li>
+                  {!isPaid && (
+                  <li>
+                    {isPending ? (<div>Loading...</div>) : (
+                      <div className='w-full'>
+                        <PayPalButtons createOrder={createOrder} onApprove={onApprove} onError={onError}>
+
+                        </PayPalButtons>
+                      </div>
+                    )}
+                  </li>)}
                 </ul>
               </div>
             </div>
