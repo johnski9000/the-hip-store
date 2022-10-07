@@ -9,13 +9,10 @@ import PlaceOrderScreen from './placeorder';
 
 export default function PaymentScreen() {
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('');
-
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
   const { shippingAddress, paymentMethod } = cart;
-
   const router = useRouter();
-
   const submitHandler = (e) => {
     e.preventDefault();
     if (!selectedPaymentMethod) {
@@ -29,7 +26,6 @@ export default function PaymentScreen() {
         paymentMethod: selectedPaymentMethod,
       })
     );
-
     router.push('/placeorder');
   };
   useEffect(() => {
@@ -38,7 +34,6 @@ export default function PaymentScreen() {
     }
     setSelectedPaymentMethod(paymentMethod || '');
   }, [paymentMethod, router, shippingAddress.address]);
-
   return (
     <div>
       <CheckoutWizard activeStep={2} />
@@ -54,7 +49,6 @@ export default function PaymentScreen() {
               checked={selectedPaymentMethod === payment}
               onChange={() => setSelectedPaymentMethod(payment)}
             />
-
             <label className="p-2" htmlFor={payment}>
               {payment}
             </label>
