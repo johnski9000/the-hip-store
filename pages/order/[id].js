@@ -142,7 +142,6 @@ function OrderScreen() {
                 <div className="alert-error">Not delivered</div>
               )}
             </div>
-
             <div className="card p-5">
               <h2 className="mb-2 text-lg">Payment Method</h2>
               <div>{paymentMethod}</div>
@@ -152,7 +151,6 @@ function OrderScreen() {
                 <div className="alert-error">Not paid</div>
               )}
             </div>
-
             <div className="card overflow-x-auto p-5">
               <h2 className="mb-2 text-lg">Order Items</h2>
               <table className="min-w-full">
@@ -244,6 +242,5 @@ function OrderScreen() {
     </div>
   );
 }
-
 OrderScreen.auth = true;
 export default OrderScreen;
